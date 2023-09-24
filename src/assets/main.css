@@ -1,0 +1,33 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+
+body {
+  width: 960px;
+  height: 1384px;
+  margin-left: auto;
+  margin-right: auto;;
+  background-color: #1E1E1E;
+  padding: 77px 107px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 400;
+  color: #EAEAEA;
+}
