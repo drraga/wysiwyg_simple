@@ -90,7 +90,7 @@ export default {
 
         try {
           await navigator.clipboard.writeText(contentToCopy);
-          window.alert('Выделенный HTLM скопирован')
+          window.alert('Выделенный HTML скопирован')
         } catch (err) {
           window.alert(`Невозможно скопировать выделенный HTML. Ошибка: ${err.message}`)
         }
@@ -119,7 +119,7 @@ export default {
           resolve();
         };
         image.onerror = () => {
-          reject(new Error(window.alert('Введен непарвильный URL изображения')));
+          reject(new Error(window.alert('Введен неправильный URL изображения')));
         };
         image.src = url;
       });
