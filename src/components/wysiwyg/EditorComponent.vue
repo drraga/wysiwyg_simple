@@ -205,7 +205,8 @@ export default {
 }
 
 .custom-image {
-  width: 739px;
+  max-width: 739px;
+  width: 100%;
   height: 308px;
   border-radius: 10px;
   object-fit: cover;
