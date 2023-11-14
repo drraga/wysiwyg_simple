@@ -1,5 +1,5 @@
 <template>
-  <div class="button-container">
+  <nav class="button-container">
     <button type="button" class="custom-button" @click="undo">
       <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="42" height="38" rx="4" fill="#282828" />
@@ -32,39 +32,11 @@
         <path d="M17.7591 17.2558C16.765 17.2558 15.9563 16.447 15.9563 15.453C15.9563 14.4589 16.765 13.6502 17.7591 13.6502C18.7531 13.6502 19.5619 14.4589 19.5619 15.453C19.5619 16.447 18.7531 17.2558 17.7591 17.2558Z" fill="#639EFF" />
       </svg>
     </button>
-    <button type="button" class="custom-button button-copy" @click="copyHTML">
+    <button type="button" class="custom-button" @click="copyHTML">
       Скопировать HTML
     </button>
-  </div>
+  </nav>
 </template>
-
-<!-- <script>
-
-export default {
-  name: 'ControlComponent',
-  emits: ['undo', 'redo', 'convert-elements-to-tag', 'insert-image', 'copy-html'],
-  methods: {
-    undo() {
-      this.$emit('undo')
-    },
-    redo() {
-      this.$emit('redo')
-    },
-    convertElementsToHeading() {
-      this.$emit('convert-elements-to-tag', 'h2')
-    },
-    convertElementsToParagraph() {
-      this.$emit('convert-elements-to-tag', 'p')
-    },
-    insertImage() {
-      this.$emit('insert-image')
-    },
-    copyHTML() {
-      this.$emit('copy-html')
-    }
-  }
-}
-</script> -->
 
 <script setup>
 const emit = defineEmits(['undo', 'redo', 'convert-elements-to-tag', 'insert-image', 'copy-html']);
@@ -98,19 +70,29 @@ function copyHTML() {
 .button-container {
   display: flex;
   align-items: center;
-  padding-bottom: 31px;
+  padding-bottom: clamp( .2rem, 3.229vw, 1.938rem);
 }
 
 .custom-button {
   border: none;
-  text-decoration: none;
   display: inline-flex;
-  align-items: center;
-  margin-right: 12px;
+  margin-right: clamp( .25rem, 1.25vw, .75rem);
+  font-size: clamp( .5rem, 1.3542vw, .8125rem);
   padding: 0;
   border-radius: 4px;
   cursor: pointer;
-  color: #639EFF;
+  color: var(--color-button);
   background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.custom-button svg path{
+  transition: all 0.2s ease;
+}
+
+.custom-button:hover svg path,
+.custom-button:hover {
+  fill: var(--color-button-hover);
+  color: var(--color-button-hover);
 }
 </style>
