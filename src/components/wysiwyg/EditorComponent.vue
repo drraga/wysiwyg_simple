@@ -126,11 +126,11 @@ export default {
     },
     updateContent() {
       const newContent = this.editor.innerHTML;
-      if (newContent !== this.currentContent) {
+      if (newContent !== this.content) {
         this.history.splice(this.currentHistoryIndex + 1);
         this.history.push(newContent);
         this.currentHistoryIndex += 1;
-        this.currentContent = newContent;
+        this.content = newContent;
       }
     },
     updateEditorContent() {

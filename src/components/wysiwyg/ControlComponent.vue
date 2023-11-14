@@ -38,7 +38,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 
 export default {
   name: 'ControlComponent',
@@ -63,6 +63,34 @@ export default {
       this.$emit('copy-html')
     }
   }
+}
+</script> -->
+
+<script setup>
+const emit = defineEmits(['undo', 'redo', 'convert-elements-to-tag', 'insert-image', 'copy-html']);
+
+function undo() {
+  emit('undo')
+}
+
+function redo() {
+  emit('redo')
+}
+
+function convertElementsToHeading() {
+  emit('convert-elements-to-tag', 'h2')
+}
+
+function convertElementsToParagraph() {
+  emit('convert-elements-to-tag', 'p')
+}
+
+function insertImage() {
+  emit('insert-image')
+}
+
+function copyHTML() {
+  emit('copy-html')
 }
 </script>
 
