@@ -7,6 +7,7 @@
       @insert-image="handleInsertImage"
       @copy-html="handleCopyHTML"
     />
+
     <div ref="editor" contenteditable="true" class="content-wrapper">
       <p v-html="content" />
     </div>
