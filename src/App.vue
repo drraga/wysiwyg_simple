@@ -1,5 +1,5 @@
 <script>
-import EditorComponent from './components/wysiwyg/EditorComponent.vue'
+import EditorComponent from './components/EditorComponent.vue'
 
 export default {
   components: {

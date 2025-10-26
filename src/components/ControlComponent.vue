@@ -39,7 +39,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'ControlComponent',
   emits: ['undo', 'redo', 'convert-elements-to-tag', 'insert-image', 'copy-html'],
