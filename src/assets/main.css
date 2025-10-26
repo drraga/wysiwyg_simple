@@ -1,10 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 a,
 .green {
   text-decoration: none;
@@ -20,14 +15,9 @@ a,
 
 
 body {
-  width: 960px;
-  height: 1384px;
-  margin-left: auto;
-  margin-right: auto;;
-  background-color: #1E1E1E;
-  padding: 77px 107px;
+  max-width: 960px;
+  margin: 0 auto;
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 400;
-  color: #EAEAEA;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="EditorComponent">
     <control-component
       @undo="handleUndo"
       @redo="handleRedo"
@@ -188,6 +188,10 @@ export default {
 </script>
 
 <style>
+.EditorComponent {
+  padding: 77px 107px;
+}
+
 .content-wrapper{
   padding: 4px;
 }
@@ -195,18 +199,18 @@ export default {
 .custom-paragraph {
   font-size: 15px;
   margin-bottom: 18px;
-  color: #EAEAEA;
+  color: var(--color-text);
 }
 
 .custom-header {
   font-size: 31px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: var(--color-text);
   margin-bottom: 19px;
 }
 
 .custom-image {
-  width: 739px;
+  width: 100%;
   height: 308px;
   border-radius: 10px;
   object-fit: cover;
